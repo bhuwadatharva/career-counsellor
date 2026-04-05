@@ -1,0 +1,32 @@
+# ── Core API ──────────────────────────────────────────────────────────
+fastapi==0.115.0
+uvicorn[standard]==0.30.0
+pydantic==2.7.0
+python-multipart==0.0.9
+
+# ── LLM — Local inference via Ollama ──────────────────────────────────
+ollama==0.3.3
+# Setup: curl https://ollama.ai/install.sh | sh
+# Then:  ollama pull llama3.2
+
+# ── RAG — Pinecone Vector DB ───────────────────────────────────────────
+pinecone-client==3.2.2
+sentence-transformers==3.0.1
+# Set env: export PINECONE_API_KEY=your-key-here
+# Ingest:  POST /admin/ingest
+
+# ── Fine-tuning — LoRA on Llama 3.2 ───────────────────────────────────
+torch==2.3.0
+transformers==4.43.0
+peft==0.12.0
+trl==0.9.6
+datasets==2.21.0
+bitsandbytes==0.43.3
+accelerate==0.33.0
+# Run: python finetune.py --train
+# Then: python finetune.py --export
+# Then: ollama create career-counsellor -f models/career-llama-finetuned/Modelfile
+
+# ── Utilities ─────────────────────────────────────────────────────────
+httpx==0.27.0
+numpy==1.26.4
