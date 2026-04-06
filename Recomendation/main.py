@@ -14,6 +14,8 @@ import os
 from questionnaire import aggregate_answers, get_questions_for_api
 from rag_engine import RAGEngine
 from llm_agent import CareerCounsellorAgent, OllamaLLM
+from dotenv import load_dotenv
+load_dotenv()
 
 app = FastAPI(
     title="AI Career Counsellor — LLM Agent Edition",
