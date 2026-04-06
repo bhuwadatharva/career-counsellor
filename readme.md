@@ -89,8 +89,8 @@ career_counsellor_v3/
 ### 1. Clone and install
 
 ```bash
-git clone https://github.com/yourname/career-counsellor-v3
-cd career_counsellor_v3
+git clone https://github.com/bhuwadatharva/career-counsellor
+cd career_counsellor
 python -m venv venv
 source venv/bin/activate        # Windows: venv\Scripts\activate
 pip install -r requirements.txt
