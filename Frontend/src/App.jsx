@@ -356,15 +356,7 @@ function QuizPage({ profile, onComplete, onError }) {
         return r.json();
       })
       .then((d) => setQuestions(d.questions))
-      .catch((err) =>
-        onError("Cannot Load Questions", [
-          `Could not reach ${API_BASE}/questions`,
-          `Error: ${err.message}`,
-          "Make sure your FastAPI server is running:",
-          "uvicorn main:app --reload --port 8000",
-          "And that CORS is enabled in main.py",
-        ]),
-      );
+      .catch((err) => onError("Cannot Load Questions"));
   }, []);
 
   if (!questions)
@@ -379,7 +371,7 @@ function QuizPage({ profile, onComplete, onError }) {
             letterSpacing: 2,
           }}
         >
-          CONNECTING TO {API_BASE}...
+          AI is thinking of questions for you...
         </p>
       </div>
     );
