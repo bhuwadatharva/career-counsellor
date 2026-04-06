@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: career-counsellor-api
+    runtime: python
+    pythonVersion: "3.11.4"
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PINECONE_API_KEY
+        sync: false
+      - key: PYTHON_VERSION
+        value: "3.11.4"
