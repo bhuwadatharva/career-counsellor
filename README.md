@@ -1,7 +1,7 @@
 # AI Career Counsellor v3.0
 
 ### 🚀 Live Demo
-👉 https://career-counsellor-2-h3c8.onrender.com/
+👉 https://career-counsellor-1.onrender.com/
 
 ### LLM Agent · RAG · Multi-Step Reasoning · Fine-Tunable Llama 3.2
 
